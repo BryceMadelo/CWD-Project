@@ -138,14 +138,14 @@
                 <a href="https://www.instagram.com/brays_0/" target="_blank">
                     <i class="fa-brands fa-instagram" style="color: white; font-size: 25px; margin-left: 40px;"></i>
                 </a>
-                <a href="">
+                <a href="https://x.com/brayss07" target="_blank">
                     <i class="fa-brands fa-twitter" style="color: white; font-size: 25px; margin-left: 40px"></i>
                 </a>
                 <a href="https://www.linkedin.com/in/brycemadelo/" target="_blank">
                     <i class="fa-brands fa-linkedin" style="color: white; font-size: 25px; margin-left: 40px"></i>
                 </a>
             </div>
-            <button class="CV_button center">View CV</button>
+            <button class="CV_button center" onclick="downloadCV()">View CV</button>
             <br>
             <img src="images/home-gif.gif" alt="Home GIF" style="height: 40px; width: 40px; margin-top: 50px;">
         </div>
@@ -426,5 +426,18 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="index.js"></script>
+    <script>
+        //CV Download
+        function downloadCV() {
+    // Replace 'path_to_your_pdf_file.pdf' with the actual path to your PDF CV
+    const pdfPath = 'cv/Bryce_Madelo_CV.pdf';
+    const link = document.createElement('a');
+    link.href = pdfPath;
+    link.setAttribute('download', 'BryceMadeloCV.pdf');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+        }
+    </script>
 </body>
 </html>

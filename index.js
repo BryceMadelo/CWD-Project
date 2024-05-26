@@ -1,3 +1,4 @@
+//Click Underline on NavBar
 document.addEventListener('DOMContentLoaded', function() {
   const navLinks = document.querySelectorAll('#nav-mobile .nav-link');
   navLinks.forEach(link => {
@@ -10,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Nav Scroll
 document.addEventListener("DOMContentLoaded", function() {
-  // Select all links with hashes
+  
   const links = document.querySelectorAll('a[href^="#"]');
 
   for (const link of links) {
@@ -18,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
           // Prevent default anchor click behavior
           event.preventDefault();
 
-          // Get the target element
+          
           const targetID = this.getAttribute("href");
           const targetElement = document.querySelector(targetID);
 
@@ -29,14 +30,15 @@ document.addEventListener("DOMContentLoaded", function() {
       });
   }
 
-  $('.sidenav').sidenav({
-    edge: 'right'
+    $('.sidenav').sidenav({
+      edge: 'right'
+    });
+    //Will Close after an item is clicked
+    $('#mobile-demo li a').on('click', function(){
+      $('.sidenav').sidenav('close');
   });
-  //Will Close after an item is clicked
-  $('#mobile-demo li a').on('click', function(){
-    $('.sidenav').sidenav('close');
 });
-});
+
 
 // For Slider
 var sliderCounter = 0;
