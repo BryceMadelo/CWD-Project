@@ -12,60 +12,137 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>Index</title>
+    <title>Portfolio</title>
+    <link rel="website icon" type="png" href="images/portfolio_icon.png">
 </head>
 <body style="background-color: #d0dcbc;">
-    <div class="navbar-fixed" style="align-items: center;">
+    <div id="home" class="navbar-fixed" style="align-items: center;">
         <nav style="height: 13%; background-color: #d0dcbc;">
             <div class="row" style="margin: 0; height: 100%; display: flex; align-items: center;">
                 <div class="title col l6 s12 m6">
-                    <h4 style="color: #b84329; margin: 0; padding: 0;">Bryce</h4>
+                    <a href="#home">
+                        <h4 style="color: #b84329; margin: 0; padding: 0; font-weight: bold;">PORTFOLIO</h4>
+                    </a>
                 </div>
                 <div class="col s12 m6 side-bar">
-                    <a href="">
-                        <i class="fa-solid fa-bars fa-sm" style="color: #b84329; font-size: x-large;"></i>
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+                        <i class="fa-solid fa-bars fa-sm" style="color: #b84329; font-size: x-large; padding-left: 250px;"></i>
                     </a>
                 </div>
                 <ul id="nav-mobile" class="right hide-on-med-and-down col l6" style="padding-top: auto; padding-bottom: auto;">
                     <li>
-                        <a href="" style="color: #b84329; font-size: larger;">About Me</a>
+                        <a href="#about-me" class="nav-link" style="color: #b84329; font-size: larger; font-weight: bold;">About Me</a>
                     </li>
                     <li>
-                        <a href="" style="color: #b84329; font-size: large;">Experience</a>
+                        <a href="#experience" class="nav-link" style="color: #b84329; font-size: large; font-weight: bold;">Experience</a>
                     </li>
                     <li>
-                        <a href="" style="color: #b84329; font-size: large;">Education</a>
+                        <a href="#education" class="nav-link" style="color: #b84329; font-size: large; font-weight: bold;">Education</a>
                     </li>
                     <li>
-                        <a href="" style="color: #b84329; font-size: large;">Projects</a>
+                        <a href="#skills" class="nav-link" style="color: #b84329; font-size: large; font-weight: bold;">Skills</a>
                     </li>
                     <li>
-                        <a href="" style="color: #b84329; font-size: large;">Hobbies</a>
+                        <a href="#projects" class="nav-link" style="color: #b84329; font-size: large; font-weight: bold;">Projects</a>
+                    </li>
+                    <li>
+                        <a href="hobbies.html" class="nav-link" style="color: #b84329; font-size: large; font-weight: bold;">Hobbies</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </div>
-    <br>
-    <div class="container" style="margin-top: 60px;">
+    <!--SideNav-->
+    <ul class="sidenav" id="mobile-demo" style="background-color: #8aa166;">
+        <li>
+            <a href="#about-me" class="white-text">About Me</a>
+        </li>
+        <li>
+            <a href="#experience" class="white-text">Experience</a>
+        </li>
+        <li>
+            <a href="#education" class="white-text">Education</a>
+        </li>
+        <li>
+            <a href="#skills" class="white-text">Skills</a>
+        </li>
+        <li>
+            <a href="#projects" class="white-text">Projects</a>
+        </li>
+        <li>
+            <a href="#hobbies" class="white-text">Hobbies</a>
+        </li>
+    </ul>
+    <div class="home" style="padding-top: 10px; padding-bottom: 100px;">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
+            <defs>
+                <linearGradient id="bg">
+                    <stop offset="0%" style="stop-color:rgba(130, 158, 249, 0.06)"></stop>
+                    <stop offset="50%" style="stop-color:rgba(138, 161, 102, 0.6)"></stop>
+                    <stop offset="100%" style="stop-color:rgba(115, 209, 72, 0.2)"></stop>
+                </linearGradient>
+                <path id="wave" fill="url(#bg)" d="M-363.852,502.589c0,0,236.988-41.997,505.475,0
+        s371.981,38.998,575.971,0s293.985-39.278,505.474,5.859s493.475,48.368,716.963-4.995v560.106H-363.852V502.589z" />
+            </defs>
+            <g>
+                <use xlink:href='#wave' opacity=".3">
+                    <animateTransform
+            attributeName="transform"
+            attributeType="XML"
+            type="translate"
+            dur="10s"
+            calcMode="spline"
+            values="270 230; -334 180; 270 230"
+            keyTimes="0; .5; 1"
+            keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+            repeatCount="indefinite" />
+                </use>
+                <use xlink:href='#wave' opacity=".6">
+                    <animateTransform
+            attributeName="transform"
+            attributeType="XML"
+            type="translate"
+            dur="8s"
+            calcMode="spline"
+            values="-270 230;243 220;-270 230"
+            keyTimes="0; .6; 1"
+            keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+            repeatCount="indefinite" />
+                </use>
+                <use xlink:href='#wave' opacty=".9">
+                    <animateTransform
+            attributeName="transform"
+            attributeType="XML"
+            type="translate"
+            dur="6s"
+            calcMode="spline"
+            values="0 230;-140 200;0 230"
+            keyTimes="0; .4; 1"
+            keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+            repeatCount="indefinite" />
+                </use>
+            </g>
+        </svg>
         <div class="content center">
-            <p style="font-size: 1.7rem; font-weight: bold; color: #303d2e;">Hello and Welcome</p>
+            <br>
+            <p class="welcome" style="font-size: 1.7rem; font-weight: bold; color: white;">Hello and Welcome</p>
             <div id="slider" style="margin-left: auto; margin-right: auto; margin-top: 50px;">
                 <div class="span center" id="sliderValue"></div>
             </div>
             <br>
             <div class="row center socials" style="margin-top: 30px;">
-                <a href="">
-                    <i class="fa-brands fa-facebook" style="color: #001c40; font-size: 25px;"></i>
+                <a href="https://www.facebook.com/bryce.madelo.7" target="_blank">
+                    <i class="fa-brands fa-facebook" style="color: white; font-size: 25px;"></i>
+                </a>
+                <a href="https://www.instagram.com/brays_0/" target="_blank">
+                    <i class="fa-brands fa-instagram" style="color: white; font-size: 25px; margin-left: 40px;"></i>
                 </a>
                 <a href="">
-                    <i class="fa-brands fa-instagram" style="color: #001c40; font-size: 25px; margin-left: 40px;"></i>
+                    <i class="fa-brands fa-twitter" style="color: white; font-size: 25px; margin-left: 40px"></i>
                 </a>
-                <a href="">
-                    <i class="fa-brands fa-twitter" style="color: #001c40; font-size: 25px; margin-left: 40px"></i>
-                </a>
-                <a href="">
-                    <i class="fa-brands fa-linkedin" style="color: #001c40; font-size: 25px; margin-left: 40px"></i>
+                <a href="https://www.linkedin.com/in/brycemadelo/" target="_blank">
+                    <i class="fa-brands fa-linkedin" style="color: white; font-size: 25px; margin-left: 40px"></i>
                 </a>
             </div>
             <button class="CV_button center">View CV</button>
@@ -74,13 +151,13 @@
         </div>
     </div>
     <br>
-    <br>
-    <div class="container about-me" style="margin-top: 100px;">
+    <br id="about-me">
+    <div class="container about-me" style="margin-top: 70px;">
         <div class="row center">
-            <div class="col s4 profile">
+            <div class="col s12 m12 l4 profile">
                 <img src="images/tanjiro_profile.webp" alt="Tanjiro Profile">
             </div>
-            <div class="col s8 about_content">
+            <div class="col s12 m12 l8 about_content">
                 <h4 class="center" style="color: #303d2e;">ABOUT ME</h4>
                 <br>
                 <p style="font-size: 16px; text-align: justify;">I am Bryce Christian A. Madelo, a dedicated person with background in programming languages such as JavaScript, Kotlin, and Python. I have experience in UI/UX design for app development using tools like figma and canva. i am quite comfortable on working as a front-end developer on both app and web development. </p>
@@ -107,9 +184,10 @@
             </div>
         </div>
     </div>
-    <br><br><br>
-    <div class="container">
+    <br id="experience">
+    <div class="container" style="margin-top: 70px;">
         <h4 class="center">EXPERIENCE</h4>
+        <br>
         <br>
         <div class="exp" style="width: 80%; margin-left: auto; margin-right: auto;">
             <nav class="nav-extended">
@@ -127,7 +205,7 @@
                     <br>
                     <h5 style="font-weight: bold; margin-left: 10px;">UI/UX Designer</h5>
                     <p style="color: #7C8185; margin-left: 15px;">May 2024 - April 2024</p>
-                    <a href="" class="btn-large" style="height: 40px; width: 150px; display: flex; align-items: center; background-color: #3B4F2F; border-radius: 5px; margin-left: 10px;">
+                    <a href="https://www.facebook.com/photo/?fbid=803732518451651&set=a.538471341644438" target="_blank" class="btn-large" style="height: 40px; width: 150px; display: flex; align-items: center; background-color: #3B4F2F; border-radius: 5px; margin-left: 10px;">
                         <p style="margin-left: auto; margin-right: auto;">View Info</p>
                     </a>
                     <p style="padding: 20px">I served as a UI/UX designer in the hackathon for HyGears. We deisgned an app for Amway that will encourage millenials to join as a business owners. We are one of 10 finalists.</p>
@@ -136,7 +214,7 @@
                     <br>
                     <h5 style="font-weight: bold; margin-left: 10px;">AI Talkbot Support</h5>
                     <p style="color: #7C8185; margin-left: 15px;">August 2023 - October 2023</p>
-                    <a href="" class="btn-large" style="height: 40px; width: 150px; display: flex; align-items: center; background-color: #3B4F2F; border-radius: 5px; margin-left: 10px;">
+                    <a href="https://www.wiz.ai/" target="_blank" class="btn-large" style="height: 40px; width: 150px; display: flex; align-items: center; background-color: #3B4F2F; border-radius: 5px; margin-left: 10px;">
                         <p style="margin-left: auto; margin-right: auto;">WIZ.AI</p>
                     </a>
                     <p style="padding: 20px">I did my summer internship in WIZ.AI where I along with my fellow schoolmates supports the main product of the company which is AI Talkbot through various tasks.</p>
@@ -145,7 +223,7 @@
                     <br>
                     <h5 style="font-weight: bold; margin-left: 10px;">Junior Cloud Architect</h5>
                     <p style="color: #7C8185; margin-left: 15px;">September 2023 - present</p>
-                    <a href="" class="btn-large" style="height: 40px; width: 300px; display: flex; align-items: center; background-color: #3B4F2F; border-radius: 5px; margin-left: 10px;">
+                    <a href="https://www.facebook.com/AWSCloudClubPUPManila" target="_blank" class="btn-large" style="height: 40px; width: 300px; display: flex; align-items: center; background-color: #3B4F2F; border-radius: 5px; margin-left: 10px;">
                         <p style="margin-left: auto; margin-right: auto;">AWS Cloud Club - PUP Manila</p>
                     </a>
                     <p style="padding: 20px">I joined this club as soon as the opening was announced. I started as full member and got promoted to Junior Cloud Architect when I applied for skill builder. In here I was able to learn and be familiar with how AWS work and also joined their pythonquest to improve my python programming skill.</p>
@@ -153,8 +231,8 @@
             </div>
         </div>
     </div>
-    <br><br>
-    <div class="container">
+    <br id="education">
+    <div class="container educ" style="margin-top: 70px;">
         <h4>EDUCATION</h4>
         <br>
         <div class="row">
@@ -198,21 +276,147 @@
                     </div>
                 </div>
             </div>
-            <div class="col s12 m12 l4" id="test2" style="margin-bottom: auto;">
+            <div class="col s12 m12 l4" id="books-gif" style="margin-bottom: auto;">
                 <img src="images/books.gif" alt="Books Icon" style="height: 80%; width: auto;">
             </div>
         </div>
     </div>
-    <br><br>
-    <div class="container">
+    <br id="skills">
+    <div class="skills_con" style="margin-top: 70px;">
         <h4 class="center">SKILLS</h4>
         <br>
-        <div class="carousel">
-            <div class="carousel-item html" style="height: 100px; width: 80px; background-color: #b84329; border: 2px solid black; border-radius: 5px;">
+        <div class="slider">
+            <div class="slider-track">
+                <div class="html">
+                    <img src="images/html_logo.png" alt="HTML Logo">
+                    <p>HTML</p>
+                </div>
+                <div class="css">
+                    <img src="images/css_logo.png" alt="CSS Logo">
+                    <p>CSS</p>
+                </div>
+                <div class="javascript">
+                    <img src="images/js_logo.png" alt="JavaScript Logo">
+                    <p>JavaScript</p>
+                </div>
+                <div class="git">
+                    <img src="images/git_logo.png" alt="Git Logo">
+                    <p>Git</p>
+                </div>
+                <div class="kotlin">
+                    <img src="images/kotlin_logo.png" alt="kotlin Logo">
+                    <p>Kotlin</p>
+                </div>
+                <div class="python">
+                    <img src="images/python_logo.png" alt="Python Logo">
+                    <p>Python</p>
+                </div>
+                <div class="figma">
+                    <img src="images/figma_logo.png" alt="Figma logo">
+                    <p>Figma</p>
+                </div>
+                <div class="android-studio">
+                    <img src="images/android_logo.png" alt="Android Studio Logo">
+                    <p>Android Studio</p>
+                </div>
+                <div class="vs-code">
+                    <img src="images/vs_code_logo.png" alt="Visual Studio Code Logo">
+                    <p>Visual Studio Code</p>
+                </div>
+                <!--Repeat-->
+                <div class="html">
+                    <img src="images/html_logo.png" alt="HTML Logo">
+                    <p>HTML</p>
+                </div>
+                <div class="css">
+                    <img src="images/css_logo.png" alt="CSS Logo">
+                    <p>CSS</p>
+                </div>
+                <div class="javascript">
+                    <img src="images/js_logo.png" alt="JavaScript Logo">
+                    <p>JavaScript</p>
+                </div>
+                <div class="git">
+                    <img src="images/git_logo.png" alt="Git Logo">
+                    <p>Git</p>
+                </div>
+                <div class="kotlin">
+                    <img src="images/kotlin_logo.png" alt="kotlin Logo">
+                    <p>Kotlin</p>
+                </div>
+                <div class="python">
+                    <img src="images/python_logo.png" alt="Python Logo">
+                    <p>Python</p>
+                </div>
+                <div class="figma">
+                    <img src="images/figma_logo.png" alt="Figma logo">
+                    <p>Figma</p>
+                </div>
+                <div class="android-studio">
+                    <img src="images/android_logo.png" alt="Android Studio Logo">
+                    <p>Android Studio</p>
+                </div>
+                <div class="vs-code">
+                    <img src="images/vs_code_logo.png" alt="Visual Studio Code Logo">
+                    <p>Visual Studio Code</p>
+                </div>
             </div>
-            <div class="carousel-item html" style="height: 100px; width: 80px; background-color: #b84329; border: 2px solid black; border-radius: 5px; margin-left: 20px;">
+        </div>
+    </div>
+    <br id="projects">
+    <div class="container center" style="margin-top: 70px;">
+        <h4>PROJECTS</h4>
+        <div class="row projects" >
+            <div class="col s12 m12 l4 project-1">
+                <div>
+                    <h5>HOBBITS App</h5>
+                    <img src="images/hobbits_img.png" alt="HOBBTS Logo">
+
+                    <!--Project Info-->
+                    <div class="project-1_info">
+                        <p style="text-align: left; margin: 0; padding-left: 10px; padding-right: 5px; padding-top: 5px;">Hobbits is an Android application designed to assist users in cultivating healthy hobbies in a simplified and effective manner.</p>
+                    </div>
+                    <br>
+                    <div class="project-1_tech">
+                        <p style="text-align: right; margin: 0; padding-top: 5px; padding-bottom: 5px; padding-right: 5px;">Kotlin</p>
+                    </div>
+                </div>
             </div>
-            <div class="carousel-item html" style="height: 100px; width: 80px; background-color: #b84329; border: 2px solid black; border-radius: 5px; margin-left: 20px;">
+            <div class="col s12 m12 l4 project-2">     
+                <div>
+                    <div>
+                        <h5>Riot  Website Clone</h5>
+                        <img src="images/riot_logo.png" alt="Riots Logo">
+    
+                        <!--Project Info-->
+                        <div class="project-2_info">
+                            <p style="text-align: left; margin: 0; padding-left: 10px; padding-right: 5px; font-size: 14px;">This project is a recreation of the Riot Games official website. Aiming to provide a realistic experience that mirrors the design, layout, and functionality of the original website.</p>
+                        </div>
+                        <br>
+                        <div class="project-2_tech">
+                            <p style="text-align: right; margin: 0; padding-top: 5px; padding-bottom: 5px; padding-right: 5px;">HTML, CSS, JS</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m12 l4 project-3">     
+                <div>
+                    <div>
+                        <h5>CEA RIS</h5>
+                        <img src="images/caeris_logo.png" alt="CEA RIS Logo">
+    
+                        <!--Project Info-->
+                        <div class="project-3_info">
+                            <p style="text-align: left; margin: 0; padding-left: 10px; padding-right: 5px; padding-top: 5px;">
+                                The CEA Room Information System is a versatile web-based application designed to streamline the management of room in PUP CEA.
+                            </p>
+                        </div>
+                        <br>
+                        <div class="project-3_tech">
+                            <p style="text-align: right; margin: 0; padding-top: 5px; padding-bottom: 5px; padding-right: 5px;">HTML, CSS, JS. Python</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

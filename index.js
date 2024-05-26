@@ -1,3 +1,42 @@
+document.addEventListener('DOMContentLoaded', function() {
+  const navLinks = document.querySelectorAll('#nav-mobile .nav-link');
+  navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+          navLinks.forEach(nav => nav.classList.remove('active-link'));
+          this.classList.add('active-link');
+      });
+  });
+});
+
+// Nav Scroll
+document.addEventListener("DOMContentLoaded", function() {
+  // Select all links with hashes
+  const links = document.querySelectorAll('a[href^="#"]');
+
+  for (const link of links) {
+      link.addEventListener("click", function(event) {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Get the target element
+          const targetID = this.getAttribute("href");
+          const targetElement = document.querySelector(targetID);
+
+          // Scroll to the target element
+          targetElement.scrollIntoView({
+              behavior: "smooth"
+          });
+      });
+  }
+
+  $('.sidenav').sidenav({
+    edge: 'right'
+  });
+  //Will Close after an item is clicked
+  $('#mobile-demo li a').on('click', function(){
+    $('.sidenav').sidenav('close');
+});
+});
 
 // For Slider
 var sliderCounter = 0;
@@ -47,15 +86,5 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-//Skills - Carousel
-document.addEventListener('DOMContentLoaded', function() {
-    // Select all elements with class 'carousel'
-    var carousels = document.querySelectorAll('.carousel');
 
-    // Loop through each 'carousel' element and initialize the carousel
-    carousels.forEach(function(carousel) {
-        // Initialize the carousel
-        var instance = M.Carousel.init(carousel);
-    });
-});
 

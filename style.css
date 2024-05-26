@@ -2,15 +2,49 @@
     box-sizing: border-box;
 }
 
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  box-sizing: border-box;
+  display: block;
+  background-color: #8aa166;
+  background-image: linear-gradient(to bottom, rgba(10, 71, 51, 0.86), #8aa166);
+}
+.home {
+  position: relative;
+}
+
 .navbar-fixed > .row > ul {
     display: flex;
     align-items: center;
     margin-top: 50px;
 }
 
+.active-link {
+  border-bottom: 2px solid #b84329;
+}
+
 @media (min-width: 992px) {
     .side-bar {
       display: none; /* Hide on large screens */
+    }
+  }
+  @media (max-width: 990px) {
+    .educ > .row #books-gif {
+      display: none;
+    }
+    .container > .content > #slider {
+      font-size: 50px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container > .content > #slider {
+        font-size: 35px;
     }
   }
 
@@ -73,10 +107,10 @@
     margin-top: 30px;
     padding: 8px 20px 8px 20px;
     border-radius: 50px;
-    background-color: transparent;
-    color: #b84329;
+    background-color: black;
+    color: white;
     font-weight: bold;
-    border: 1px solid black;
+    border: 1px solid white;
     cursor: pointer;
   }
 
@@ -111,4 +145,265 @@
   .column > .dev_tools ul > li {
     list-style-type: disc;
     width: auto;
+  }
+
+  /* Skills - Slider */
+  .skills_con > .slider {
+    height: 250px;
+    margin: auto;
+    position: relative;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+  }
+
+  .skills_con > .slider > .slider-track {
+    display: flex;
+    width: calc(250px * 18);
+    animation: scroll 30s linear infinite;
+  }
+
+  .skills_con > .slider > .slider-track:hover {
+    animation-play-state: paused;
+    cursor: pointer;
+  }
+  .skills_con > .slider > .slider-track div {
+    width: 250px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    background-color: #8aa166;
+    border: 2px solid #303d2e;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .skills_con > .slider > .slider-track div:hover {
+    border: 2px solid #b84329;
+    cursor: pointer;
+  }
+
+  .skills_con > .slider > .slider-track div img {
+    height: 60%;
+    width: 70%;
+  }
+
+  .skills_con > .slider > .slider-track div p {
+    margin: 0;
+    padding: 0;
+    padding-top: 5px;
+    font-weight: bold;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-250px * 9));
+    }
+  }
+
+  /* Project */
+  .container > .projects{
+    height: auto;
+  }
+
+  .container > .row > .project-1 div {
+    height: 340px; 
+    width: 280px; 
+    margin-top: 20px;
+    background-color: #303d2e; 
+    border-radius: 10px;
+    box-shadow: #b84329;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+  }
+
+  .container > .row > .project-1 div h5 {
+    padding-top: 30px;
+    color: #b84329;
+    font-weight: bold;
+  }
+
+  .container > .row > .project-1 div img {
+    height: 70%; 
+    width: 80%;
+  }
+
+  .container > .row > .project-1 div > .project-1_info {
+    height: 40%; 
+    width: 80%; 
+    margin-top: 40px;
+    background-color: #d0dcbc;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    position: absolute;
+    display: none;
+  }
+
+  .container > .row > .project-1 div:hover .project-1_info {
+    display: block;
+    cursor: pointer;
+  }
+
+  .container > .row > .project-1 div:hover img {
+    display: none;
+    cursor: pointer;
+  }
+
+  .container > .row > .project-1 div > .project-1_tech {
+    height: auto; 
+    width: 20%; 
+    background-color: #d0dcbc;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    margin-top: 180px;
+    margin-left: auto;
+    display: none;
+  }
+
+  .container > .row > .project-1 div:hover .project-1_tech {
+    display: block;
+  }
+
+  /* Project 2 */
+  .container > .row > .project-2 div {
+    height: 340px; 
+    width: 280px; 
+    margin-top: 20px;
+    background-color: #303d2e; 
+    border-radius: 10px;
+    box-shadow: #b84329;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+  }
+
+  .container > .row > .project-2 div h5 {
+    padding-top: 30px;
+    color: #b84329;
+    font-weight: bold;
+  }
+
+  .container > .row > .project-2 div img {
+    height: 45%; 
+    width: 55%;
+    margin-top: 30px;
+  }
+
+  .container > .row > .project-2 div > .project-2_info {
+    height: 40%; 
+    width: 80%; 
+    margin-top: 40px;
+    background-color: #d0dcbc;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    position: absolute;
+    display: none;
+  }
+
+  .container > .row > .project-2 div:hover .project-2_info {
+    display: block;
+  }
+
+  .container > .row > .project-2 div:hover img {
+    display: none;
+    cursor: pointer;
+  }
+
+  .container > .row > .project-2 div > .project-2_tech {
+    height: auto; 
+    width: 40%; 
+    background-color: #d0dcbc;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    margin-top: 180px;
+    margin-left: auto;
+    display: none;
+  }
+
+  .container > .row > .project-2 div:hover .project-2_tech {
+    display: block;
+    cursor: pointer;
+  }
+
+  /* Project 3 */
+  .container > .row > .project-3 div {
+    height: 340px; 
+    width: 280px; 
+    margin-top: 20px;
+    background-color: #303d2e; 
+    border-radius: 10px;
+    box-shadow: #b84329;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+  }
+
+  .container > .row > .project-3 div h5 {
+    padding-top: 30px;
+    color: #b84329;
+    font-weight: bold;
+  }
+
+  .container > .row > .project-3 div img {
+    height: 60%; 
+    width: 70%;
+    margin-top: 20px;
+  }
+
+  .container > .row > .project-3 div > .project-3_info {
+    height: 40%; 
+    width: 80%; 
+    margin-top: 40px;
+    background-color: #d0dcbc;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    position: absolute;
+    display: none;
+  }
+
+  .container > .row > .project-3 div:hover .project-3_info {
+    display: block;
+  }
+
+  .container > .row > .project-3 div:hover img {
+    display: none;
+    cursor: pointer;
+  }
+
+  .container > .row > .project-3 div > .project-3_tech {
+    height: auto; 
+    width: 60%; 
+    background-color: #d0dcbc;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    margin-top: 180px;
+    display: none;
+  }
+
+  .container > .row > .project-3 div:hover .project-3_tech {
+    display: block;
+    cursor: pointer;
   }
